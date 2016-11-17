@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Parroquia la Santa Cruz </title>
+    
+    <environment names="Development">
+        <script src="~/build/vendors/vendors.js"></script>
+        <script src="~/build/app/app.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+    </environment>
+
+    <environment names="Development">
+        <link rel="stylesheet" type="text/css" href="~/build/vendors/vendors.css">
+    </environment>
+    <environment names="Staging,Production">
+    </environment>
+</head>
+<body>
+    <div ng-app="mandarinhr" ng-cloak>
+        @RenderBody()
+    </div>
+    <footer>
+        <p>&copy; 2016 - Parroquia Core Version 1.0</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FD6AD990-83AF-42D3-99B0-206F5DD123A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D22A53E-0362-4AB4-BFD1-A9EB1A5DEEAB}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ParroquiaCore", "src\ParroquiaCore\ParroquiaCore.xproj", "{4441DE52-6FD7-4079-9B5D-CD74576559D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4441DE52-6FD7-4079-9B5D-CD74576559D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4441DE52-6FD7-4079-9B5D-CD74576559D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4441DE52-6FD7-4079-9B5D-CD74576559D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4441DE52-6FD7-4079-9B5D-CD74576559D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4441DE52-6FD7-4079-9B5D-CD74576559D4} = {FD6AD990-83AF-42D3-99B0-206F5DD123A1}
+	EndGlobalSection
+EndGlobal
