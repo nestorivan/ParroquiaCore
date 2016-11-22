@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ParroquiaCore.Data;
 
 namespace ParroquiaCore
 {
@@ -19,6 +21,8 @@ namespace ParroquiaCore
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
+
+            builder.AddEnvironmentVariables();
             Configuration = builder.Build();
         }
 
@@ -27,8 +31,16 @@ namespace ParroquiaCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
-            services.AddMvc();
+            try
+            {
+                // Add framework services.
+                services.AddDbContext<ParroquiaCoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+                services.AddMvc();
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
