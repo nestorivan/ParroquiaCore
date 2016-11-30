@@ -14,9 +14,6 @@ namespace ParroquiaCore.Models
 
         public string Abreviacion { get; set; }
 
-        [ForeignKey("Pais")]
-        public int PaisId { get; set; }
-
-        public virtual Pais Pais { get; set; }
+        public Pais Pais { get; set; }
     }
 }

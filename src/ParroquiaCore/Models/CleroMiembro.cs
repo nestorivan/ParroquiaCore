@@ -9,13 +9,7 @@ namespace ParroquiaCore.Models
     public class CleroMiembro : PersonaBaseModel
     {
         public int Id { get; set; }
-
-        [ForeignKey("CleroTitulo")]
-        public int CleroTituloId { get; set; }
-        [ForeignKey("Parroquia")]
-        public int ParroquiaId { get; set; }
-
-        public virtual CleroTitulo CleroTitulo { get; set; }
-        public virtual Parroquia Parroquia { get; set; }
+        public CleroTitulo CleroTitulo { get; set; }
+        public Parroquia Parroquia { get; set; }
     }
 }

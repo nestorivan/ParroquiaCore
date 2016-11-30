@@ -14,14 +14,8 @@ namespace ParroquiaCore.Models
         [Required]
         public string Nombre { get; set; }
 
-        [ForeignKey("Diocesis")]
-        public int DiocesisId { get; set; }
+        public List<CleroMiembro> MiembrosClero { get; set; }
 
-        [ForeignKey("Direccion")]
-        public int DireccionId { get; set; }
-
-
-        public virtual List<Sacerdote> Sacerdotes { get; set; }
-        public virtual Direccion Direccion { get; set; }
+        public Direccion Direccion { get; set; }
     }
 }

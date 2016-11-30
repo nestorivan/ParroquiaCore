@@ -13,13 +13,7 @@ namespace ParroquiaCore.Models
         public int NumeroExterior { get; set; }
         public string NumeroInterior { get; set; }
 
-        [ForeignKey("Colonia")]
-        public int ColoniaId { get; set; }
-
-        [ForeignKey("Delegacion")]
-        public int? DelegacionId { get; set; }
-
-        public virtual Colonia Colonia { get; set; }
-        public virtual Delegacion Delegacion { get; set; }
+        public Colonia Colonia { get; set; }
+        public Delegacion Delegacion { get; set; }
     }
 }

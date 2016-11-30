@@ -11,10 +11,6 @@ namespace ParroquiaCore.Models
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-
-        [ForeignKey("Archidiosesis")]
-        public int ArchidiocesisId { get; set; }
-
-        public virtual Archidiocesis Archidiocesis { get; set; }
+        public Archidiocesis Archidiocesis { get; set; }
     }
 }

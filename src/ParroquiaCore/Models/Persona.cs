@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -10,16 +11,18 @@ namespace ParroquiaCore.Models
     {
         public int Id { get; set; }
 
-        public int PadreId { get; set; }
-        public int MadreId { get; set; }
-        public int AbueloPaternoId { get; set; }
-        public int AbueloMaternoId { get; set; }
-        public int AbuelaPaternaId { get; set; }
-        public int AbuelaMaternaId { get; set; }
+        public Persona Padre { get; set; }
+        public Persona Madre { get; set; }
 
-        [ForeignKey("Direccion")]
-        public int DireccionNacimientoId { get; set; }
+        [JsonIgnore]
+        public Persona AbueloPaterno { get; set; }
+        [JsonIgnore]
+        public Persona AbueloMaterno { get; set; }
+        [JsonIgnore]
+        public Persona AbuelaPaterna { get; set; }
+        [JsonIgnore]
+        public Persona AbuelaMaterna { get; set; }
         
-        public virtual Direccion DireccionNacimiento { get; set; }
+        public Direccion DireccionNacimiento { get; set; }
     }
 }

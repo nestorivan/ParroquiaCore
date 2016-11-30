@@ -11,13 +11,7 @@ namespace ParroquiaCore.Models
         public int Id { get; set; }
         public string Nombre { get; set; }
 
-        [ForeignKey("Municipio")]
-        public int MunicipioId { get; set; }
-
-        [ForeignKey("CodigoPostal")]
-        public int CodigoPostalId { get; set; }
-
-        public virtual Municipio Municipio { get; set; }
-        public virtual CodigoPostal CodigoPostal { get; set; }
+        public Municipio Municipio { get; set; }
+        public CodigoPostal CodigoPostal { get; set; }
     }
 }
