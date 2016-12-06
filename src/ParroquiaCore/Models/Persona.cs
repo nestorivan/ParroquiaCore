@@ -11,18 +11,20 @@ namespace ParroquiaCore.Models
     {
         public int Id { get; set; }
 
-        public Persona Padre { get; set; }
-        public Persona Madre { get; set; }
-
-        [JsonIgnore]
-        public Persona AbueloPaterno { get; set; }
-        [JsonIgnore]
-        public Persona AbueloMaterno { get; set; }
-        [JsonIgnore]
-        public Persona AbuelaPaterna { get; set; }
-        [JsonIgnore]
-        public Persona AbuelaMaterna { get; set; }
-        
         public Direccion DireccionNacimiento { get; set; }
+
+        public Direccion DireccionActual { get; set; }
+        
+        public virtual Persona Padre { get; set; }
+
+        public virtual Persona Madre { get; set; }
+
+        public virtual Persona AbueloPaterno { get; set; }
+
+        public virtual Persona AbueloMaterno { get; set; }
+
+        public virtual Persona AbuelaPaterna { get; set; }
+
+        public virtual Persona AbuelaMaterna { get; set; }
     }
 }

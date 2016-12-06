@@ -8,8 +8,8 @@ namespace ParroquiaCore.Models.BaseModels
     public class LibroBaseModel
     {
         public int Id { get; set; }
-        public string Libro { get; set; }
-        public int Pagina { get; set; }
         public int Numero { get; set; }
+        public int Libro { get; set; }
+        public int Pagina { get; set; }
     }
 }

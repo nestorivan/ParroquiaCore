@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ParroquiaCore.Models
 {
-    public class LibroBautismo : LibroBaseModel
+    public class LibroConfirmacion :LibroBaseModel
     {
-        public List<Bautismo> Bautismos { get; set; }
+        public List<Confirmacion> Confirmaciones { get; set; }
     }
 }

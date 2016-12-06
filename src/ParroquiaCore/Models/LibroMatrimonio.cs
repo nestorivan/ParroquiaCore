@@ -8,5 +8,6 @@ namespace ParroquiaCore.Models
 {
     public class LibroMatrimonio : LibroBaseModel
     {
+        public List<Matrimonio> Matrimonios { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ParroquiaCore.Data
 {
     public class ParroquiaCoreContext : DbContext
     {
-        public ParroquiaCoreContext(DbContextOptions options) 
+        public ParroquiaCoreContext(DbContextOptions options)
             : base(options)
         {
         }
@@ -27,7 +27,27 @@ namespace ParroquiaCore.Data
         public DbSet<CleroTitulo> CleroTitulos { get; set; }
         public DbSet<CleroMiembro> CleroMiembros { get; set; }
         public DbSet<Persona> Personas { get; set; }
+        public DbSet<LibroDefuncion> LibroDefunciones { get; set; }
+        public DbSet<Defuncion> Defunciones { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Persona>()
+                .HasKey(e => e.Id);
+
+            modelBuilder.Entity<Persona>()
+                .HasOne(e => e.Padre);
+            modelBuilder.Entity<Persona>()
+                .HasOne(e => e.Madre);
+            modelBuilder.Entity<Persona>()
+                .HasOne(e => e.AbueloPaterno);
+            modelBuilder.Entity<Persona>()
+                .HasOne(e => e.AbueloMaterno);
+            modelBuilder.Entity<Persona>()
+                .HasOne(e => e.AbuelaMaterna);
+            modelBuilder.Entity<Persona>()
+                .HasOne(e => e.AbuelaPaterna);
+        }
 
     }
 }

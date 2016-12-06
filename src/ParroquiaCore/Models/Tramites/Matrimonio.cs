@@ -8,6 +8,7 @@ namespace ParroquiaCore.Models
     public class Matrimonio
     {
         public int Id { get; set; }
+        public string Expediente { get; set; }
         public Persona Novio { get; set; }
         public Persona Novia { get; set; }
         public Persona Testigo1 { get; set; }
@@ -15,8 +16,7 @@ namespace ParroquiaCore.Models
         public Persona Padrino { get; set; }
         public Persona Madrina { get; set; }
         public DateTime Fecha { get; set; }
+        public Parroquia ParroquiaTramito { get; set; }
         public Parroquia Parroquia { get; set; }
-        public LibroMatrimonio Libro { get; set; }
-
     }
 }
